@@ -469,10 +469,10 @@
 
         sym_en {
             bindings = <
-  &kp TILDE       &kp LT          &kp EQUAL         &kp GT           &kp GRAVE                            &kp STAR     &kp N7   &kp N8  &kp N9  &mt NUMBER_2 PLUS
-  &hml LGUI BSLH  &hml LALT LPAR  &hml LSHFT MINUS  &hml LCTRL RPAR  &kp PLUS                             &kp PERCENT  &kp N4   &kp N5  &kp N6  &kp MINUS
-  &kp HASH        &kp STAR        &kp COLON         &kp FSLH         &kp AMPS                             &kp N0       &kp N1   &kp N2  &kp N3  &kp DOT
-                                                    &kp DEL          &kp ENTER  &kp TAB    &kp BACKSPACE  &kp SPACE    &kp ESC
+  &kp TILDE     &kp CARET        &none            &none              &none                                &kp STAR     &kp N7   &kp N8  &kp N9  &mt NUMBER_2 PLUS
+  &hml LCTRL A  &hml LEFT_GUI A  &hml LEFT_ALT A  &hml LEFT_SHIFT A  &none                                &kp PERCENT  &kp N4   &kp N5  &kp N6  &kp MINUS
+  &none         &none            &none            &none              &none                                &kp N0       &kp N1   &kp N2  &kp N3  &kp DOT
+                                                  &kp DEL            &kp ENTER  &kp TAB    &kp BACKSPACE  &kp SPACE    &kp ESC
             >;
 
             display-name = "Symbols";
@@ -480,10 +480,10 @@
 
         sym_ru {
             bindings = <
-  &en TILDE               &en LT          &kp EQUAL         &en GT           &en GRAVE                            &kp RU_STAR     &kp N7   &kp N8  &kp N9  &mt NUMBER_3 PLUS
-  &hml LGUI RU_BACKSLASH  &hml LALT LPAR  &hml LSHFT MINUS  &hml LCTRL RPAR  &kp PLUS                             &kp RU_PERCENT  &kp N4   &kp N5  &kp N6  &kp MINUS
-  &en HASH                &kp STAR        &kp RU_COLON      &kp RU_FSLH      &en AMPS                             &kp N0          &kp N1   &kp N2  &kp N3  &kp RU_DOT
-                                                            &kp DEL          &kp ENTER  &kp TAB    &kp BACKSPACE  &kp SPACE       &kp ESC
+  &en TILDE         &en CARET         &none            &none              &none                                &kp RU_STAR     &kp N7   &kp N8  &kp N9  &mt NUMBER_3 PLUS
+  &hml LCTRL A      &hml LEFT_GUI A   &hml LEFT_ALT A  &hml LEFT_SHIFT A  &none                                &kp RU_PERCENT  &kp N4   &kp N5  &kp N6  &kp MINUS
+  &en LS(NUMBER_2)  &en LS(NUMBER_3)  &none            &none              &none                                &kp N0          &kp N1   &kp N2  &kp N3  &kp RU_DOT
+                                                       &kp DEL            &kp ENTER  &kp TAB    &kp BACKSPACE  &kp SPACE       &kp ESC
             >;
 
             display-name = "Symbolsru";
@@ -509,37 +509,37 @@
 
         mac_sym_en {
             bindings = <
-  &none  &none  &none  &none    &none                                &kp STAR     &kp N7   &kp N8  &kp N9  &mt NUMBER_6 A
-  &none  &none  &none  &none    &none                                &kp PERCENT  &kp N4   &kp N5  &kp N6  &kp MINUS
-  &none  &none  &none  &none    &none                                &kp N0       &kp N1   &kp N2  &kp N3  &kp DOT
-                       &kp DEL  &kp ENTER  &kp TAB    &kp BACKSPACE  &kp SPACE    &kp ESC
+  &kp TILDE2       &kp CARET     &none            &none              &none                                &kp STAR     &kp N7   &kp N8  &kp N9  &mt NUMBER_6 A
+  &hml LEFT_GUI A  &hml LCTRL A  &hml LEFT_ALT A  &hml LEFT_SHIFT A  &none                                &kp PERCENT  &kp N4   &kp N5  &kp N6  &kp MINUS
+  &none            &none         &none            &none              &none                                &kp N0       &kp N1   &kp N2  &kp N3  &kp DOT
+                                                  &kp DEL            &kp ENTER  &kp TAB    &kp BACKSPACE  &kp SPACE    &kp ESC
             >;
         };
 
         mac_sym_ru {
             bindings = <
-  &none  &none  &none  &none    &none                                &kp RU_STAR     &kp N7   &kp N8  &kp N9  &mt NUMBER_7 A
-  &none  &none  &none  &none    &none                                &kp RU_PERCENT  &kp N4   &kp N5  &kp N6  &kp MINUS
-  &none  &none  &none  &none    &none                                &kp N0          &kp N1   &kp N2  &kp N3  &kp LS(NUMBER_7)
-                       &kp DEL  &kp ENTER  &kp TAB    &kp BACKSPACE  &kp SPACE       &kp ESC
+  &en TILDE2        &en CARET         &none            &none              &none                                &kp RU_STAR     &kp N7   &kp N8  &kp N9  &mt NUMBER_7 A
+  &hml LEFT_GUI A   &hml LCTRL A      &hml LEFT_ALT A  &hml LEFT_SHIFT A  &none                                &kp RU_PERCENT  &kp N4   &kp N5  &kp N6  &kp MINUS
+  &en LS(NUMBER_2)  &en LS(NUMBER_3)  &none            &none              &none                                &kp N0          &kp N1   &kp N2  &kp N3  &kp LS(NUMBER_7)
+                                                       &kp DEL            &kp ENTER  &kp TAB    &kp BACKSPACE  &kp SPACE       &kp ESC
             >;
         };
 
         fn {
             bindings = <
-  &kp F2    &kp F3          &kp F4  &kp F5         &kp F6                                    &kp F7     &kp F8   &kp F9  &kp F10  &mt NUMBER_8 F11
-  &kp F1    &mmv MOVE_LEFT  &none   &kp PAGE_UP    &msc SCRL_UP                              &none      &none    &none   &none    &kp F12
-  &kp CAPS  &none           &none   &kp PAGE_DOWN  &msc SCRL_DOWN                            &none      &none    &none   &none    &none
-                                    &kp DEL        &kp ENTER       &kp TAB    &kp BACKSPACE  &kp SPACE  &kp ESC
+  &kp F2    &kp F3          &kp F4  &kp F5            &kp F6                               &kp F7     &kp F8   &kp F9  &kp F10  &mt NUMBER_8 F11
+  &kp F1    &mmv MOVE_LEFT  &none   &kp K_PLAY_PAUSE  &none                                &none      &none    &none   &none    &kp F12
+  &kp CAPS  &none           &none   &none             &none                                &none      &none    &none   &none    &none
+                                    &kp DEL           &kp ENTER  &kp TAB    &kp BACKSPACE  &kp SPACE  &kp ESC
             >;
         };
 
         nav {
             bindings = <
-  &none     &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &none                                &none      &none    &none  &none  &mt NUMBER_9 A
-  &kp HOME  &kp LEFT      &kp DOWN  &kp RIGHT      &kp END                              &none      &none    &none  &none  &none
-  &none     &none         &none     &none          &none                                &none      &none    &none  &none  &none
-                                    &kp DEL        &kp ENTER  &kp TAB    &kp BACKSPACE  &kp SPACE  &kp ESC
+  &none     &none     &kp UP    &kp PAGE_UP    &none                                &none      &none    &none  &none  &mt NUMBER_9 A
+  &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT      &kp END                              &none      &none    &none  &none  &none
+  &none     &none     &none     &kp PAGE_DOWN  &none                                &none      &none    &none  &none  &none
+                                &kp DEL        &kp ENTER  &kp TAB    &kp BACKSPACE  &kp SPACE  &kp ESC
             >;
         };
 
