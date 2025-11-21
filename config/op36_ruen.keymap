@@ -611,10 +611,10 @@
 
         nav {
             bindings = <
-  &to_home_line  &none     &kp UP    &kp PAGE_UP    &to_end_line                            &none      &none    &none  &none  &mt NUMBER_9 A
-  &kp HOME       &kp LEFT  &kp DOWN  &kp RIGHT      &kp END                                 &none      &none    &none  &none  &none
-  &to_all_line   &none     &none     &kp PAGE_DOWN  &none                                   &none      &none    &none  &none  &none
-                                     &kp DEL        &kp ENTER     &kp TAB    &kp BACKSPACE  &kp SPACE  &kp ESC
+  &to_home_line    &none               &kp UP              &kp PAGE_UP            &to_end_line                            &kp ASTERISK  &kp N7                     &kp N8                   &kp N9                   &mt NUMBER_9 PLUS
+  &hml LCTRL HOME  &hml LEFT_GUI LEFT  &hml LEFT_ALT DOWN  &hml LEFT_SHIFT RIGHT  &kp END                                 &kp SLASH     &hmr RIGHT_SHIFT NUMBER_4  &hmr RIGHT_ALT NUMBER_5  &hmr RIGHT_GUI NUMBER_6  &hmr RCTRL MINUS
+  &to_all_line     &none               &none               &kp PAGE_DOWN          &none                                   &kp N0        &kp N1                     &kp N2                   &kp N3                   &kp DOT
+                                                           &kp DEL                &kp ENTER     &kp TAB    &kp BACKSPACE  &kp SPACE     &kp ESC
             >;
         };
 
