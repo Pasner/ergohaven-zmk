@@ -544,10 +544,10 @@
 
         sym_en {
             bindings = <
-  &kp TILDE     &kp CARET        &kp AT_SIGN      &none              &none                                  &kp STAR     &kp N7   &kp N8  &kp N9  &mt NUMBER_2 PLUS
-  &hml LCTRL A  &hml LEFT_GUI A  &hml LEFT_ALT A  &hml LEFT_SHIFT A  &code_block                            &kp PERCENT  &kp N4   &kp N5  &kp N6  &kp MINUS
-  &none         &none            &none            &none              &none                                  &kp N0       &kp N1   &kp N2  &kp N3  &kp DOT
-                                                  &kp DEL            &kp ENTER    &kp TAB    &kp BACKSPACE  &kp SPACE    &kp ESC
+  &none          &none        &none       &none     &none                                  &kp CARET      &kp TILDE         &kp GRAVE          &none              &mt NUMBER_2 EXCLAMATION
+  &kp AMPERSAND  &kp AT_SIGN  &kp DOLLAR  &kp HASH  &kp PERCENT                            &kp BACKSLASH  &kp LEFT_BRACKET  &kp DOUBLE_QUOTES  &kp RIGHT_BRACKET  &kp SEMICOLON
+  &none          &none        &none       &none     &none                                  &kp PIPE       &kp LESS_THAN     &kp APOSTROPHE     &kp GREATER_THAN   &kp QUESTION
+                                          &kp DEL   &kp ENTER    &kp TAB    &kp BACKSPACE  &kp SPACE      &kp ESC
             >;
 
             display-name = "Symbols";
@@ -629,9 +629,9 @@
 
         nav_mac {
             bindings = <
-  &to_home_line_mac  &none     &kp UP    &kp PAGE_UP    &to_end_line_mac                            &none      &none    &none  &none  &mt M A
-  &kp HOME           &kp LEFT  &kp DOWN  &kp RIGHT      &kp END                                     &none      &none    &none  &none  &none
-  &to_all_line_mac   &none     &none     &kp PAGE_DOWN  &none                                       &none      &none    &none  &none  &none
+  &to_home_line_mac  &none     &kp UP    &kp PAGE_UP    &to_end_line_mac                            &kp STAR   &kp N7                     &kp N8                   &kp N9               &mt M A
+  &kp HOME           &kp LEFT  &kp DOWN  &kp RIGHT      &kp END                                     &kp SLASH  &hmr RIGHT_SHIFT NUMBER_4  &hmr RIGHT_ALT NUMBER_5  &hmr RCTRL NUMBER_6  &hmr RIGHT_GUI MINUS
+  &to_all_line_mac   &none     &none     &kp PAGE_DOWN  &none                                       &kp N0     &kp N1                     &kp N2                   &kp N3               &kp DOT
                                          &kp DEL        &kp ENTER         &kp TAB    &kp BACKSPACE  &kp SPACE  &kp ESC
             >;
         };
