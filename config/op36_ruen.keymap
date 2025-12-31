@@ -223,6 +223,18 @@
             key-positions = <35 34>;
             layers = <5>;
         };
+
+        dont_write_ru {
+            bindings = <&none>;
+            key-positions = <1 2>;
+            layers = <1 5 3 7>;
+        };
+
+        dont_write_en {
+            bindings = <&none>;
+            key-positions = <11 12>;
+            layers = <0 2 4 6>;
+        };
     };
 
     macros {
@@ -437,7 +449,7 @@
             bindings = <
   &kp ESCAPE     &none        &none       &none     &none                                  &kp CARET      &kp TILDE         &kp GRAVE          &kp EQUAL          &kp EXCL
   &kp AMPERSAND  &kp AT_SIGN  &kp DOLLAR  &kp HASH  &kp PERCENT                            &kp BACKSLASH  &kp LEFT_BRACKET  &kp DOUBLE_QUOTES  &kp RIGHT_BRACKET  &kp SEMICOLON
-  &none          &none        &none       &none     &none                                  &kp PIPE       &kp LESS_THAN     &kp APOSTROPHE     &kp GREATER_THAN   &kp QUESTION
+  &en F          &kp GRAVE    &none       &none     &none                                  &kp PIPE       &kp LESS_THAN     &kp APOSTROPHE     &kp GREATER_THAN   &kp QUESTION
                                           &kp DEL   &kp ENTER    &kp TAB    &kp BACKSPACE  &kp SPACE      &kp ESC
             >;
         };
