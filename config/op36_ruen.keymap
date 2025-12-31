@@ -288,7 +288,7 @@
                 <&to_ru>;
 
             label = "EN";
-            wait-ms = <0>;
+            wait-ms = <30>;
             tap-ms = <30>;
         };
 
@@ -449,7 +449,7 @@
             bindings = <
   &kp ESCAPE     &none        &none       &none     &none                                  &kp CARET      &kp TILDE         &kp GRAVE          &kp EQUAL          &kp EXCL
   &kp AMPERSAND  &kp AT_SIGN  &kp DOLLAR  &kp HASH  &kp PERCENT                            &kp BACKSLASH  &kp LEFT_BRACKET  &kp DOUBLE_QUOTES  &kp RIGHT_BRACKET  &kp SEMICOLON
-  &en F          &kp GRAVE    &none       &none     &none                                  &kp PIPE       &kp LESS_THAN     &kp APOSTROPHE     &kp GREATER_THAN   &kp QUESTION
+  &en F          &kp GRAVE    &kp TILDE   &none     &none                                  &kp PIPE       &kp LESS_THAN     &kp APOSTROPHE     &kp GREATER_THAN   &kp QUESTION
                                           &kp DEL   &kp ENTER    &kp TAB    &kp BACKSPACE  &kp SPACE      &kp ESC
             >;
         };
