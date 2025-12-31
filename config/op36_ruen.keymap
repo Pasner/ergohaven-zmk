@@ -199,16 +199,6 @@
             bindings = <&mo 10>;
             key-positions = <30 31>;
         };
-
-        Lalt {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <11 12>;
-        };
-
-        Ralt {
-            bindings = <&kp RIGHT_ALT>;
-            key-positions = <17 18>;
-        };
     };
 
     macros {
@@ -359,10 +349,10 @@
 
         en {
             bindings = <
-  &kp Q         &kp W  &kp E  &kp R              &kp T                                      &kp Y        &kp U          &kp I      &kp O    &mt NUMBER_0 P
-  &hml LCTRL A  &kp S  &kp D  &hml LEFT_SHIFT F  &lt 13 G                                   &kp H        &hmr RSHIFT J  &kp K      &kp L    &hmr RCTRL SEMICOLON
-  &kp Z         &kp X  &kp C  &kp V              &lt 8 B                                    &lt 8 N      &kp M          &kp COMMA  &kp DOT  &kp DOT
-                              &kp LEFT_GUI       &lt 9 ENTER  &lt 2 TAB    &lt 2 BACKSPACE  &lt 9 SPACE  &kp RIGHT_GUI
+  &kp Q            &kp W  &kp E  &kp R              &kp T                                      &kp Y        &kp U          &kp I      &kp O    &mt NUMBER_0 P
+  &hml LEFT_GUI A  &kp S  &kp D  &hml LEFT_SHIFT F  &lt 13 G                                   &kp H        &hmr RSHIFT J  &kp K      &kp L    &hmr RIGHT_GUI SEMICOLON
+  &hml LEFT_ALT Z  &kp X  &kp C  &kp V              &lt 8 B                                    &lt 8 N      &kp M          &kp COMMA  &kp DOT  &hmr RIGHT_ALT DOT
+                                 &kp LCTRL          &lt 9 ENTER  &lt 2 TAB    &lt 2 BACKSPACE  &lt 9 SPACE  &kp RCTRL
             >;
 
             display-name = "Base";
@@ -370,10 +360,10 @@
 
         ru {
             bindings = <
-  &kp RU_CYRILLIC_SHORT_I    &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA         &kp RU_CYRILLIC_IE                                   &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE             &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &mt NUMBER_1 RU_CYRILLIC_ZE
-  &hml LCTRL RU_CYRILLIC_EF  &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &hml LSHIFT RU_CYRILLIC_A  &lt 13 RU_CYRILLIC_PE                                &kp RU_CYRILLIC_ER  &hmr RIGHT_SHIFT RU_CYRILLIC_O  &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &hmr RCTRL RU_CYRILLIC_ZHE
-  &kp RU_CYRILLIC_YA         &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM         &kp RU_CYRILLIC_I                                    &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN       &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_DOT
-                                                                       &lt 8 DEL                  &lt 12 ENTER           &lt 3 TAB    &lt 3 BACKSPACE  &lt 12 SPACE        &lt 8 ESC
+  &kp RU_CYRILLIC_SHORT_I       &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA         &kp RU_CYRILLIC_IE                                   &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE             &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &mt NUMBER_1 RU_CYRILLIC_ZE
+  &hml LEFT_GUI RU_CYRILLIC_EF  &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &hml LSHIFT RU_CYRILLIC_A  &lt 13 RU_CYRILLIC_PE                                &kp RU_CYRILLIC_ER  &hmr RIGHT_SHIFT RU_CYRILLIC_O  &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &hmr RIGHT_GUI RU_CYRILLIC_ZHE
+  &hml LEFT_ALT RU_CYRILLIC_YA  &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM         &lt 8 B                                              &lt 8 N             &kp RU_CYRILLIC_SOFT_SIGN       &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &hmr RIGHT_ALT RU_DOT
+                                                                          &kp LCTRL                  &lt 12 ENTER           &lt 3 TAB    &lt 3 BACKSPACE  &lt 12 SPACE        &kp RCTRL
             >;
 
             display-name = "Ru";
@@ -381,10 +371,10 @@
 
         sym_en {
             bindings = <
-  &none          &none        &none       &none     &none                                  &kp CARET      &kp TILDE         &kp GRAVE          &kp EQUAL          &mt NUMBER_2 EXCLAMATION
-  &kp AMPERSAND  &kp AT_SIGN  &kp DOLLAR  &kp HASH  &kp PERCENT                            &kp BACKSLASH  &kp LEFT_BRACKET  &kp DOUBLE_QUOTES  &kp RIGHT_BRACKET  &kp SEMICOLON
-  &none          &none        &none       &none     &none                                  &kp PIPE       &kp LESS_THAN     &kp APOSTROPHE     &kp GREATER_THAN   &kp QUESTION
-                                          &kp DEL   &kp ENTER    &kp TAB    &kp BACKSPACE  &kp SPACE      &kp ESC
+  &kp ESC        &none        &none       &none      &none                                  &kp CARET      &kp TILDE         &kp GRAVE          &kp EQUAL          &mt NUMBER_2 EXCLAMATION
+  &kp AMPERSAND  &kp AT_SIGN  &kp DOLLAR  &kp HASH   &kp PERCENT                            &kp BACKSLASH  &kp LEFT_BRACKET  &kp DOUBLE_QUOTES  &kp RIGHT_BRACKET  &kp SEMICOLON
+  &none          &none        &none       &none      &none                                  &kp PIPE       &kp LESS_THAN     &kp APOSTROPHE     &kp GREATER_THAN   &kp QUESTION
+                                          &kp LCTRL  &kp ENTER    &kp TAB    &kp BACKSPACE  &kp SPACE      &kp RCTRL
             >;
 
             display-name = "Symbols";
@@ -392,10 +382,10 @@
 
         sym_ru {
             bindings = <
-  &none          &none        &none       &none     &none                                  &en CARET      &en TILDE         &en GRAVE         &kp EQUAL          &mt NUMBER_3 RU_EXCL
-  &en AMPERSAND  &en AT_SIGN  &en DOLLAR  &en HASH  &kp PERCENT                            &en BACKSLASH  &en LEFT_BRACKET  &kp LS(NUMBER_2)  &en RIGHT_BRACKET  &kp LS(NUMBER_4)
-  &none          &none        &none       &none     &none                                  &en PIPE       &en LESS_THAN     &en SINGLE_QUOTE  &en GREATER_THAN   &en QUESTION
-                                          &kp DEL   &kp ENTER    &kp TAB    &kp BACKSPACE  &kp SPACE      &kp ESC
+  &kp ESC        &none        &none       &none      &none                                  &en CARET      &en TILDE         &en GRAVE         &kp EQUAL          &mt NUMBER_3 RU_EXCL
+  &en AMPERSAND  &en AT_SIGN  &en DOLLAR  &en HASH   &kp PERCENT                            &en BACKSLASH  &en LEFT_BRACKET  &kp LS(NUMBER_2)  &en RIGHT_BRACKET  &kp LS(NUMBER_4)
+  &none          &none        &none       &none      &none                                  &en PIPE       &en LESS_THAN     &en SINGLE_QUOTE  &en GREATER_THAN   &en QUESTION
+                                          &kp LCTRL  &kp ENTER    &kp TAB    &kp BACKSPACE  &kp SPACE      &kp RCTRL
             >;
 
             display-name = "Symbolsru";
@@ -404,18 +394,18 @@
         mac_en {
             bindings = <
   &kp Q            &kp W  &kp E  &kp R              &kp T                                      &kp Y        &kp U               &kp I      &kp O    &mt NUMBER_4 P
-  &hml LEFT_GUI A  &kp S  &kp D  &hml LEFT_SHIFT F  &lt 13 G                                   &kp H        &hmr RIGHT_SHIFT J  &kp K      &kp L    &hmr RIGHT_GUI SEMI
+  &hml LCTRL A     &kp S  &kp D  &hml LEFT_SHIFT F  &lt 13 G                                   &kp H        &hmr RIGHT_SHIFT J  &kp K      &kp L    &hmr RCTRL SEMI
   &hml LEFT_ALT Z  &kp X  &kp C  &kp V              &lt 8 B                                    &lt 8 N      &kp M               &kp COMMA  &kp DOT  &hmr RIGHT_ALT DOT
-                                 &kp LCTRL          &lt 9 ENTER  &lt 6 TAB    &lt 6 BACKSPACE  &lt 9 SPACE  &kp RCTRL
+                                 &kp LEFT_GUI       &lt 9 ENTER  &lt 6 TAB    &lt 6 BACKSPACE  &lt 9 SPACE  &kp RIGHT_GUI
             >;
         };
 
         mac_ru {
             bindings = <
   &kp Q            &kp W  &kp E  &kp R              &kp T                                      &kp Y        &kp U               &kp I      &kp O    &mt NUMBER_5 RU_CYRILLIC_ZE
-  &hml LEFT_GUI A  &kp S  &kp D  &hml LEFT_SHIFT F  &lt 13 G                                   &kp H        &hmr RIGHT_SHIFT J  &kp K      &kp L    &hmr RIGHT_GUI SEMI
+  &hml LCTRL A     &kp S  &kp D  &hml LEFT_SHIFT F  &lt 13 G                                   &kp H        &hmr RIGHT_SHIFT J  &kp K      &kp L    &hmr RCTRL SEMI
   &hml LEFT_ALT Z  &kp X  &kp C  &kp V              &lt 8 B                                    &lt 8 N      &kp M               &kp COMMA  &kp DOT  &hmr RIGHT_ALT LS(NUMBER_7)
-                                 &kp LCTRL          &lt 9 ENTER  &lt 7 TAB    &lt 7 BACKSPACE  &lt 9 SPACE  &kp RCTRL
+                                 &kp LEFT_GUI       &lt 9 ENTER  &lt 7 TAB    &lt 7 BACKSPACE  &lt 9 SPACE  &kp RIGHT_GUI
             >;
         };
 
@@ -448,10 +438,10 @@
 
         nav {
             bindings = <
-  &to_home_line    &none     &kp UP    &kp PAGE_UP    &to_end_line                            &kp ASTERISK  &kp N7                     &kp N8        &kp N9        &mt NUMBER_9 PLUS
-  &hml LCTRL HOME  &kp LEFT  &kp DOWN  &kp RIGHT      &kp END                                 &kp SLASH     &hmr RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &hmr RCTRL MINUS
-  &to_all_line     &none     &none     &kp PAGE_DOWN  &none                                   &kp N0        &kp N1                     &kp N2        &kp N3        &kp LS(NUMBER_7)
-                                       &kp DEL        &kp ENTER     &kp TAB    &kp BACKSPACE  &kp SPACE     &kp ESC
+  &to_home_line  &none     &kp UP    &kp PAGE_UP    &to_end_line                            &kp ASTERISK  &kp N7                     &kp N8        &kp N9        &mt NUMBER_9 PLUS
+  &kp HOME       &kp LEFT  &kp DOWN  &kp RIGHT      &kp END                                 &kp SLASH     &hmr RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+  &to_all_line   &none     &none     &kp PAGE_DOWN  &kp DELETE                              &kp N0        &kp N1                     &kp N2        &kp N3        &kp LS(NUMBER_7)
+                                     &kp LCTRL      &kp ENTER     &kp TAB    &kp BACKSPACE  &kp SPACE     &kp RCTRL
             >;
         };
 
@@ -468,8 +458,8 @@
             bindings = <
   &to_home_line_mac  &none     &kp UP    &kp PAGE_UP    &to_end_line_mac                            &kp STAR   &kp N7                     &kp N8        &kp N9        &mt M A
   &kp HOME           &kp LEFT  &kp DOWN  &kp RIGHT      &kp END                                     &kp SLASH  &hmr RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &hmr RIGHT_GUI MINUS
-  &to_all_line_mac   &none     &none     &kp PAGE_DOWN  &none                                       &kp N0     &kp N1                     &kp N2        &kp N3        &kp DOT
-                                         &kp DEL        &kp ENTER         &kp TAB    &kp BACKSPACE  &kp SPACE  &kp ESC
+  &to_all_line_mac   &none     &none     &kp PAGE_DOWN  &kp DEL                                     &kp N0     &kp N1                     &kp N2        &kp N3        &kp DOT
+                                         &kp LEFT_GUI   &kp ENTER         &kp TAB    &kp BACKSPACE  &kp SPACE  &kp RIGHT_GUI
             >;
         };
 
@@ -477,17 +467,17 @@
             bindings = <
   &to_home_line    &none     &kp UP    &kp PAGE_UP    &to_end_line                            &en ASTERISK  &kp N7                     &kp N8        &kp N9        &mt NUMBER_9 PLUS
   &hml LCTRL HOME  &kp LEFT  &kp DOWN  &kp RIGHT      &kp END                                 &kp RU_SLASH  &hmr RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &hmr RCTRL MINUS
-  &to_all_line     &none     &none     &kp PAGE_DOWN  &none                                   &kp N0        &kp N1                     &kp N2        &kp N3        &kp RU_DOT
-                                       &kp DEL        &kp ENTER     &kp TAB    &kp BACKSPACE  &kp SPACE     &kp ESC
+  &to_all_line     &none     &none     &kp PAGE_DOWN  &kp DELETE                              &kp N0        &kp N1                     &kp N2        &kp N3        &kp RU_DOT
+                                       &kp LEFT_GUI   &kp ENTER     &kp TAB    &kp BACKSPACE  &kp SPACE     &kp RIGHT_GUI
             >;
         };
 
         revers {
             bindings = <
-  &none  &none  &none  &none       &none                              &none  &none  &none  &none  &none
-  &none  &none  &none  &none       &none                              &none  &none  &none  &none  &none
-  &none  &none  &none  &none       &none                              &none  &none  &none  &none  &none
-                       &kp ESCAPE  &kp SPACE  &kp BACKSPACE    &none  &none  &none
+  &none  &none  &none  &none  &none                              &none  &none  &none  &none  &none
+  &none  &none  &none  &none  &none                              &none  &none  &none  &none  &none
+  &none  &none  &none  &none  &none                              &none  &none  &none  &none  &none
+                       &none  &kp SPACE  &kp BACKSPACE    &none  &none  &none
             >;
         };
     };
