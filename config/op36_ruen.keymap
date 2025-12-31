@@ -279,6 +279,7 @@
             #binding-cells = <1>;
             bindings =
                 <&to_en>,
+                <&macro_wait_time 50>,
                 <&macro_press>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
@@ -447,10 +448,10 @@
 
         mac_sym_en {
             bindings = <
-  &kp ESCAPE     &none        &none       &none     &none                                  &kp CARET      &kp TILDE         &kp GRAVE          &kp EQUAL          &kp EXCL
-  &kp AMPERSAND  &kp AT_SIGN  &kp DOLLAR  &kp HASH  &kp PERCENT                            &kp BACKSLASH  &kp LEFT_BRACKET  &kp DOUBLE_QUOTES  &kp RIGHT_BRACKET  &kp SEMICOLON
-  &en F          &kp GRAVE    &kp TILDE   &none     &none                                  &kp PIPE       &kp LESS_THAN     &kp APOSTROPHE     &kp GREATER_THAN   &kp QUESTION
-                                          &kp DEL   &kp ENTER    &kp TAB    &kp BACKSPACE  &kp SPACE      &kp ESC
+  &kp ESCAPE     &none        &none       &none              &none                                  &kp CARET      &kp TILDE         &kp LS(LA(NUMBER_0))  &kp EQUAL          &kp EXCL
+  &kp AMPERSAND  &kp AT_SIGN  &kp DOLLAR  &kp HASH           &kp PERCENT                            &kp BACKSLASH  &kp LEFT_BRACKET  &kp DOUBLE_QUOTES     &kp RIGHT_BRACKET  &kp SEMICOLON
+  &kp TILDE      &kp GRAVE    &kp TILDE2  &kp RIGHT_BRACKET  &none                                  &kp PIPE       &kp LESS_THAN     &kp APOSTROPHE        &kp GREATER_THAN   &kp QUESTION
+                                          &kp DEL            &kp ENTER    &kp TAB    &kp BACKSPACE  &kp SPACE      &kp ESC
             >;
         };
 
