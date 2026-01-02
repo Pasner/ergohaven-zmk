@@ -148,41 +148,41 @@
 
         brace_left_en {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <16 7>;
+            key-positions = <26 17>;
             layers = <0 2 6 4>;
         };
 
         brace_right_en {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <6 17>;
+            key-positions = <16 27>;
             layers = <0 2 4 6>;
         };
 
         brace_left_ru {
             bindings = <&en LEFT_BRACE>;
-            key-positions = <16 7>;
+            key-positions = <26 17>;
             layers = <1 3 5 7>;
         };
 
         brace_right_ru {
             bindings = <&en RIGHT_BRACE>;
-            key-positions = <6 17>;
+            key-positions = <16 27>;
             layers = <1 3 5 7>;
         };
 
         br_left {
             bindings = <&kp LS(NUMBER_9)>;
-            key-positions = <26 17>;
+            key-positions = <17 18>;
         };
 
         br_right {
             bindings = <&kp LS(NUMBER_0)>;
-            key-positions = <27 16>;
+            key-positions = <27 28>;
         };
 
         underscore {
             bindings = <&kp UNDER>;
-            key-positions = <6 15>;
+            key-positions = <16 7>;
         };
 
         comma_mac_ru {
@@ -502,7 +502,7 @@
             bindings = <
   &to_home_line  &none     &kp UP    &kp PAGE_UP    &to_end_line                            &en ASTERISK  &kp N7                     &kp N8        &kp N9        &kp PLUS
   &kp HOME       &kp LEFT  &kp DOWN  &kp RIGHT      &kp END                                 &kp RU_SLASH  &hmr RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &hmr RCTRL MINUS
-  &to_all_line   &none     &none     &kp PAGE_DOWN  &kp DELETE                              &kp N0        &kp N1                     &kp N2        &kp N3        &kp RU_DOT
+  &to_all_line   &none     &none     &kp PAGE_DOWN  &kp DELETE                              &kp N0        &kp N1                     &kp N2        &kp N3        &en RU_DOT
                                      &kp LEFT_GUI   &kp ENTER     &kp TAB    &kp BACKSPACE  &kp SPACE     &kp RIGHT_GUI
             >;
         };
@@ -520,7 +520,7 @@
             bindings = <
   &to_home_line_mac  &none     &kp UP    &kp PAGE_UP    &to_end_line_mac                            &en STAR   &kp N7                     &kp N8        &kp N9        &kp PLUS
   &kp HOME           &kp LEFT  &kp DOWN  &kp RIGHT      &kp END                                     &kp SLASH  &hmr RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &hmr RCTRL MINUS
-  &to_all_line_mac   &none     &none     &kp PAGE_DOWN  &kp DEL                                     &kp N0     &kp N1                     &kp N2        &kp N3        &kp LS(NUMBER_7)
+  &to_all_line_mac   &none     &none     &kp PAGE_DOWN  &kp DEL                                     &kp N0     &kp N1                     &kp N2        &kp N3        &en LS(NUMBER_7)
                                          &kp LEFT_GUI   &kp ENTER         &kp TAB    &kp BACKSPACE  &kp SPACE  &kp RIGHT_GUI
             >;
         };
