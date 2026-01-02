@@ -71,11 +71,13 @@
         to_mac {
             bindings = <&mac_layer_en>;
             key-positions = <33 32>;
+            layers = <0 1>;
         };
 
         to_base {
             bindings = <&layer_en>;
             key-positions = <30 35>;
+            layers = <4 5>;
         };
 
         cmd_mac_ru {
@@ -193,11 +195,6 @@
             bindings = <&kp LS(NUMBER_5)>;
             key-positions = <16 17>;
             layers = <5 7>;
-        };
-
-        lt10 {
-            bindings = <&mo 10>;
-            key-positions = <31 3>;
         };
 
         layer_en {
@@ -388,7 +385,7 @@
         en {
             bindings = <
   &kp Q            &kp W  &kp E            &kp R              &kp T                                      &kp Y        &kp U          &kp I             &kp O    &kp P
-  &hml LEFT_GUI A  &kp S  &hml LEFT_ALT D  &hml LEFT_SHIFT F  &lt 13 G                                   &kp H        &hmr RSHIFT J  &hmr RIGHT_ALT K  &kp L    &hmr RIGHT_GUI SEMICOLON
+  &hml LEFT_GUI A  &kp S  &hml LEFT_ALT D  &hml LEFT_SHIFT F  &lt 10 G                                   &kp H        &hmr RSHIFT J  &hmr RIGHT_ALT K  &kp L    &hmr RIGHT_GUI SEMICOLON
   &kp Z            &kp X  &kp C            &kp V              &lt 8 B                                    &lt 8 N      &kp M          &kp COMMA         &kp DOT  &kp DOT
                                            &kp LCTRL          &lt 9 ENTER  &lt 2 TAB    &lt 2 BACKSPACE  &lt 9 SPACE  &kp RCTRL
             >;
@@ -399,7 +396,7 @@
         ru {
             bindings = <
   &kp RU_CYRILLIC_SHORT_I       &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U             &kp RU_CYRILLIC_KA         &kp RU_CYRILLIC_IE                                   &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE             &kp RU_CYRILLIC_SHA            &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE
-  &hml LEFT_GUI RU_CYRILLIC_EF  &kp RU_CYRILLIC_YERU  &hml LEFT_ALT RU_CYRILLIC_VE  &hml LSHIFT RU_CYRILLIC_A  &lt 13 RU_CYRILLIC_PE                                &kp RU_CYRILLIC_ER  &hmr RIGHT_SHIFT RU_CYRILLIC_O  &hmr RIGHT_ALT RU_CYRILLIC_EL  &kp RU_CYRILLIC_DE     &hmr RIGHT_GUI RU_CYRILLIC_ZHE
+  &hml LEFT_GUI RU_CYRILLIC_EF  &kp RU_CYRILLIC_YERU  &hml LEFT_ALT RU_CYRILLIC_VE  &hml LSHIFT RU_CYRILLIC_A  &lt 10 RU_CYRILLIC_PE                                &kp RU_CYRILLIC_ER  &hmr RIGHT_SHIFT RU_CYRILLIC_O  &hmr RIGHT_ALT RU_CYRILLIC_EL  &kp RU_CYRILLIC_DE     &hmr RIGHT_GUI RU_CYRILLIC_ZHE
   &kp RU_CYRILLIC_YA            &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES            &kp RU_CYRILLIC_EM         &lt 8 B                                              &lt 8 N             &kp RU_CYRILLIC_SOFT_SIGN       &kp RU_CYRILLIC_BE             &kp RU_CYRILLIC_YU     &kp RU_DOT
                                                                                     &kp LCTRL                  &lt 12 ENTER           &lt 3 TAB    &lt 3 BACKSPACE  &lt 12 SPACE        &kp RCTRL
             >;
@@ -432,7 +429,7 @@
         mac_en {
             bindings = <
   &kp Q         &kp W  &kp E            &kp R              &kp T                                       &kp Y         &kp U               &kp I             &kp O    &kp P
-  &hml LCTRL A  &kp S  &hml LEFT_ALT D  &hml LEFT_SHIFT F  &lt 13 G                                    &kp H         &hmr RIGHT_SHIFT J  &hmr RIGHT_ALT K  &kp L    &hmr RCTRL SEMI
+  &hml LCTRL A  &kp S  &hml LEFT_ALT D  &hml LEFT_SHIFT F  &lt 10 G                                    &kp H         &hmr RIGHT_SHIFT J  &hmr RIGHT_ALT K  &kp L    &hmr RCTRL SEMI
   &kp Z         &kp X  &kp C            &kp V              &lt 8 B                                     &lt 8 N       &kp M               &kp COMMA         &kp DOT  &kp DOT
                                         &kp LEFT_GUI       &lt 11 ENTER  &lt 6 TAB    &lt 6 BACKSPACE  &lt 11 SPACE  &kp RIGHT_GUI
             >;
@@ -441,7 +438,7 @@
         mac_ru {
             bindings = <
   &kp Q         &kp W  &kp E            &kp R              &kp T                                       &kp Y         &kp U               &kp I             &kp O    &kp P
-  &hml LCTRL A  &kp S  &hml LEFT_ALT D  &hml LEFT_SHIFT F  &lt 13 G                                    &kp H         &hmr RIGHT_SHIFT J  &hmr RIGHT_ALT K  &kp L    &hmr RCTRL SEMI
+  &hml LCTRL A  &kp S  &hml LEFT_ALT D  &hml LEFT_SHIFT F  &lt 10 G                                    &kp H         &hmr RIGHT_SHIFT J  &hmr RIGHT_ALT K  &kp L    &hmr RCTRL SEMI
   &kp Z         &kp X  &kp C            &kp V              &lt 8 B                                     &lt 8 N       &kp M               &kp COMMA         &kp DOT  &kp LS(NUMBER_7)
                                         &kp LEFT_GUI       &lt 14 ENTER  &lt 7 TAB    &lt 7 BACKSPACE  &lt 14 SPACE  &kp RIGHT_GUI
             >;
@@ -467,10 +464,10 @@
 
         fn {
             bindings = <
-  &kp F2    &kp F3          &kp F4  &kp F5            &kp F6                                      &kp F7     &kp F8           &kp F9  &kp F10  &kp F11
-  &kp F1    &mmv MOVE_LEFT  &none   &kp K_PLAY_PAUSE  &kp C_PLAY                                  &none      &none            &none   &none    &kp F12
-  &kp CAPS  &none           &none   &none             &kp C_PLAY_PAUSE                            &none      &kp PRINTSCREEN  &none   &none    &kp INSERT
-                                    &kp DEL           &kp ENTER         &kp TAB    &kp BACKSPACE  &kp SPACE  &kp ESC
+  &kp F2    &kp F3          &kp F4  &kp F5            &kp F6                            &kp F7  &kp F8           &kp F9  &kp F10  &kp F11
+  &kp F1    &mmv MOVE_LEFT  &none   &kp K_PLAY_PAUSE  &kp C_PLAY                        &none   &none            &none   &none    &kp F12
+  &kp CAPS  &none           &none   &none             &kp C_PLAY_PAUSE                  &none   &kp PRINTSCREEN  &none   &none    &kp INSERT
+                                    &none             &none             &none    &none  &none   &none
             >;
         };
 
@@ -483,12 +480,12 @@
             >;
         };
 
-        sets {
+        sets_and_rev {
             bindings = <
-  &none  &none  &none  &none           &none                            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-  &none  &none  &none  &none           &none                            &out OUT_BLE  &none         &none         &none         &bt BT_CLR
-  &none  &none  &none  &kp SCROLLLOCK  &kp PAUSE_BREAK                  &out OUT_USB  &none         &none         &none         &studio_unlock
-                       &none           &none            &none    &none  &none         &none
+  &none  &none  &none  &none           &none                                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+  &none  &none  &none  &none           &none                                    &out OUT_BLE  &none         &none         &none         &bt BT_CLR
+  &none  &none  &none  &kp SCROLLLOCK  &kp PAUSE_BREAK                          &out OUT_USB  &none         &none         &none         &studio_unlock
+                       &none           &kp SPACE        &kp BACKSPACE    &none  &none         &none
             >;
         };
 
