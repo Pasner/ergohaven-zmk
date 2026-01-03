@@ -376,6 +376,26 @@
 
             label = "CODE_BLOCK";
         };
+
+        ru: ru {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&to_ru>,
+                <&macro_wait_time 50>,
+                <&macro_press>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&macro_wait_time 50>,
+                <&to_en>;
+
+            label = "RU";
+            wait-ms = <30>;
+            tap-ms = <30>;
+        };
     };
 
     keymap {
@@ -405,10 +425,10 @@
 
         sym_en {
             bindings = <
-  &kp ESC        &none        &none       &none     &none                                  &kp CARET      &kp TILDE         &kp GRAVE          &kp EQUAL          &kp EXCL
-  &kp AMPERSAND  &kp AT_SIGN  &kp DOLLAR  &kp HASH  &kp PERCENT                            &kp BACKSLASH  &kp LEFT_BRACKET  &kp DOUBLE_QUOTES  &kp RIGHT_BRACKET  &kp SEMICOLON
-  &none          &none        &none       &none     &none                                  &kp PIPE       &kp LESS_THAN     &kp APOSTROPHE     &kp GREATER_THAN   &kp QUESTION
-                                          &none     &kp ENTER    &kp TAB    &kp BACKSPACE  &kp SPACE      &none
+  &kp ESC        &none        &none       &none             &none                                  &kp CARET      &kp TILDE         &kp GRAVE          &kp EQUAL          &kp EXCL
+  &kp AMPERSAND  &kp AT_SIGN  &kp DOLLAR  &kp HASH          &kp PERCENT                            &kp BACKSLASH  &kp LEFT_BRACKET  &kp DOUBLE_QUOTES  &kp RIGHT_BRACKET  &kp SEMICOLON
+  &none          &none        &none       &ru LS(NUMBER_3)  &none                                  &kp PIPE       &kp LESS_THAN     &kp APOSTROPHE     &kp GREATER_THAN   &kp QUESTION
+                                          &none             &kp ENTER    &kp TAB    &kp BACKSPACE  &kp SPACE      &none
             >;
 
             display-name = "Symbols";
@@ -416,10 +436,10 @@
 
         sym_ru {
             bindings = <
-  &kp ESC        &none        &none       &none     &none                                  &en CARET      &en TILDE         &en GRAVE         &kp EQUAL          &kp EXCL
-  &en AMPERSAND  &en AT_SIGN  &en DOLLAR  &en HASH  &kp PERCENT                            &en BACKSLASH  &en LEFT_BRACKET  &kp LS(NUMBER_2)  &en RIGHT_BRACKET  &kp LS(NUMBER_4)
-  &none          &none        &none       &none     &none                                  &en PIPE       &en LESS_THAN     &en SINGLE_QUOTE  &en GREATER_THAN   &en QUESTION
-                                          &none     &kp ENTER    &kp TAB    &kp BACKSPACE  &kp SPACE      &none
+  &kp ESC        &none        &none       &none          &none                                  &en CARET      &en TILDE         &en GRAVE         &kp EQUAL          &kp EXCL
+  &en AMPERSAND  &en AT_SIGN  &en DOLLAR  &en HASH       &kp PERCENT                            &en BACKSLASH  &en LEFT_BRACKET  &kp LS(NUMBER_2)  &en RIGHT_BRACKET  &kp LS(NUMBER_4)
+  &none          &none        &none       &kp RU_NUMERO  &none                                  &en PIPE       &en LESS_THAN     &en SINGLE_QUOTE  &en GREATER_THAN   &en QUESTION
+                                          &none          &kp ENTER    &kp TAB    &kp BACKSPACE  &kp SPACE      &none
             >;
 
             display-name = "Symbolsru";
@@ -445,19 +465,19 @@
 
         mac_sym_en {
             bindings = <
-  &kp ESCAPE     &none        &none       &none     &none                                  &kp CARET      &kp TILDE         &kp LS(LA(NUMBER_0))  &kp EQUAL          &kp EXCL
-  &kp AMPERSAND  &kp AT_SIGN  &kp DOLLAR  &kp HASH  &kp PERCENT                            &kp BACKSLASH  &kp LEFT_BRACKET  &kp DOUBLE_QUOTES     &kp RIGHT_BRACKET  &kp SEMICOLON
-  &none          &none        &none       &none     &none                                  &kp PIPE       &kp LESS_THAN     &kp APOSTROPHE        &kp GREATER_THAN   &kp QUESTION
-                                          &none     &kp ENTER    &kp TAB    &kp BACKSPACE  &kp SPACE      &none
+  &kp ESCAPE     &none        &none       &none             &none                                  &kp CARET      &ru LA(M)         &ru LS(LA(NUMBER_0))  &kp EQUAL          &kp EXCL
+  &kp AMPERSAND  &kp AT_SIGN  &kp DOLLAR  &kp HASH          &kp PERCENT                            &kp BACKSLASH  &kp LEFT_BRACKET  &kp DOUBLE_QUOTES     &kp RIGHT_BRACKET  &kp SEMICOLON
+  &none          &none        &none       &ru LS(NUMBER_3)  &none                                  &kp PIPE       &kp LESS_THAN     &kp APOSTROPHE        &kp GREATER_THAN   &kp QUESTION
+                                          &none             &kp ENTER    &kp TAB    &kp BACKSPACE  &kp SPACE      &none
             >;
         };
 
         mac_sym_ru {
             bindings = <
-  &kp ESCAPE     &none        &none       &none     &none                                       &en CARET      &kp LA(M)         &kp LS(LA(NUMBER_0))  &kp EQUAL          &kp EXCL
-  &en AMPERSAND  &en AT_SIGN  &en DOLLAR  &en HASH  &kp LS(NUMBER_4)                            &en BACKSLASH  &en LEFT_BRACKET  &kp LS(NUMBER_2)      &en RIGHT_BRACKET  &en SEMICOLON
-  &none          &none        &none       &none     &none                                       &en PIPE       &en LESS_THAN     &en SINGLE_QUOTE      &en GREATER_THAN   &en LS(QUESTION)
-                                          &none     &kp ENTER         &kp TAB    &kp BACKSPACE  &kp SPACE      &none
+  &kp ESCAPE     &none        &none       &none          &none                                       &en CARET      &kp LA(M)         &kp LS(LA(NUMBER_0))  &kp EQUAL          &kp EXCL
+  &en AMPERSAND  &en AT_SIGN  &en DOLLAR  &en HASH       &kp LS(NUMBER_4)                            &en BACKSLASH  &en LEFT_BRACKET  &kp LS(NUMBER_2)      &en RIGHT_BRACKET  &en SEMICOLON
+  &none          &none        &none       &kp RU_NUMERO  &none                                       &en PIPE       &en LESS_THAN     &en SINGLE_QUOTE      &en GREATER_THAN   &en LS(QUESTION)
+                                          &none          &kp ENTER         &kp TAB    &kp BACKSPACE  &kp SPACE      &none
             >;
         };
 
