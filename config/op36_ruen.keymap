@@ -494,9 +494,9 @@
 
         fn {
             bindings = <
-  &kp F1    &kp F2  &kp F3  &kp F4  &kp F5                  &kp F8  &kp F9           &kp F10  &kp F11  &kp F12
-  &none     &none   &none   &none   &kp F6                  &kp F7  &none            &none    &none    &none
-  &kp CAPS  &none   &none   &none   &none                   &none   &kp PRINTSCREEN  &none    &none    &kp INSERT
+  &kp F1    &kp F2  &kp F3  &kp F4  &kp F5                  &kp F8  &kp F9                &kp F10          &kp F11  &kp F12
+  &none     &none   &none   &none   &kp F6                  &kp F7  &kp NON_US_BACKSLASH  &kp NON_US_HASH  &none    &none
+  &kp CAPS  &none   &none   &none   &none                   &none   &kp PRINTSCREEN       &none            &none    &kp INSERT
                             &none   &none   &none    &none  &none   &none
             >;
         };
