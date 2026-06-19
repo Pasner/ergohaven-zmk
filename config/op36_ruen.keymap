@@ -81,13 +81,13 @@
 
         cmd_mac_ru {
             bindings = <&mac_layer_ru>;
-            key-positions = <21 22>;
+            key-positions = <12 13>;
             layers = <4>;
         };
 
         cmd_mac_en {
             bindings = <&mac_layer_en>;
-            key-positions = <1 2>;
+            key-positions = <12 13>;
             layers = <5>;
         };
 
@@ -335,21 +335,24 @@
         to_home_line: to_home_line {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(HOME)>;
+            bindings = <&kp LG(LEFT)>;
             label = "TO_HOME_LINE";
         };
 
         to_end_line: to_end_line {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(END)>;
+            bindings = <&kp LG(RIGHT)>;
             label = "TO_END_LINE";
         };
 
-        to_all_line: to_all_line {
+        select_all_line: to_all_line {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME>, <&macro_wait_time 50>, <&kp LS(END)>;
+            bindings =
+                <&kp LG(LEFT)>,
+                <&macro_wait_time 30>,
+                <&kp LS(LG(RIGHT))>;
 
             label = "TO_ALL_LINE";
         };
@@ -406,6 +409,20 @@
                 <&kp LC(V)>;
 
             label = "DOUBLE_LINE";
+        };
+
+        select_to_home_line: select_to_home_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LG(LEFT))>;
+            label = "SELECT_TO_HOME_LINE";
+        };
+
+        select_to_end_line: select_to_end_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LG(RIGHT))>;
+            label = "SELECT_TO_END_LINE";
         };
     };
 
@@ -467,10 +484,10 @@
 
         mac_ru {
             bindings = <
-  &kp Q            &kp W  &kp E               &kp R              &kp T                                       &kp Y         &kp U               &kp I      &kp O    &kp P
-  &hml LEFT_GUI A  &kp S  &kp RU_CYRILLIC_VE  &hml LEFT_SHIFT F  &kp G                                       &kp H         &hmr RIGHT_SHIFT J  &kp K      &kp L    &hmr RIGHT_GUI SEMI
-  &kp Z            &kp X  &kp C               &kp V              &kp B                                       &kp N         &kp M               &kp COMMA  &kp DOT  &kp LS(NUMBER_7)
-                                              &mo 14             &lt 13 ENTER  &lt 7 TAB    &lt 7 BACKSPACE  &lt 13 SPACE  &mo 14
+  &kp Q            &kp W  &kp E               &kp R              &kp T                         &kp Y         &kp U               &kp I      &kp O    &kp P
+  &hml LEFT_GUI A  &kp S  &kp RU_CYRILLIC_VE  &hml LEFT_SHIFT F  &kp G                         &kp H         &hmr RIGHT_SHIFT J  &kp K      &kp L    &hmr RIGHT_GUI SEMI
+  &kp Z            &kp X  &kp C               &kp V              &kp B                         &kp N         &kp M               &kp COMMA  &kp DOT  &kp LS(NUMBER_7)
+                                              &lt 14 TAB         &lt 13 ENTER  &mo 7    &mo 7  &lt 13 SPACE  &lt 14 BACKSPACE
             >;
         };
 
@@ -494,10 +511,10 @@
 
         nav {
             bindings = <
-  &to_home_line  &none         &kp UP    &kp PAGE_UP    &to_end_line                            &kp ASTERISK  &kp N7                     &kp N8        &kp N9        &kp PLUS
-  &kp HOME       &kp LEFT      &kp DOWN  &kp RIGHT      &kp END                                 &kp SLASH     &hmr RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-  &to_all_line   &double_line  &none     &kp PAGE_DOWN  &none                                   &kp N0        &kp N1                     &kp N2        &kp N3        &kp RU_DOT
-                                         &none          &kp ENTER     &kp TAB    &kp BACKSPACE  &kp SPACE     &none
+  &to_home_line     &none         &kp UP    &kp PAGE_UP    &to_end_line                            &kp ASTERISK  &kp N7                     &kp N8        &kp N9        &kp PLUS
+  &kp HOME          &kp LEFT      &kp DOWN  &kp RIGHT      &kp END                                 &kp SLASH     &hmr RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+  &select_all_line  &double_line  &none     &kp PAGE_DOWN  &none                                   &kp N0        &kp N1                     &kp N2        &kp N3        &kp RU_DOT
+                                            &none          &kp ENTER     &kp TAB    &kp BACKSPACE  &kp SPACE     &none
             >;
         };
 
@@ -512,19 +529,19 @@
 
         nav_mac {
             bindings = <
-  &to_home_line  &none     &kp UP    &kp PAGE_UP    &to_end_line                            &kp STAR   &kp N7                     &kp N8        &kp N9        &kp PLUS
-  &kp HOME       &kp LEFT  &kp DOWN  &kp RIGHT      &kp END                                 &kp SLASH  &hmr RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &hmr RCTRL MINUS
-  &to_all_line   &none     &none     &kp PAGE_DOWN  &none                                   &kp N0     &kp N1                     &kp N2        &kp N3        &kp DOT
-                                     &none          &kp ENTER     &kp TAB    &kp BACKSPACE  &kp SPACE  &none
+  &to_home_line     &none     &kp UP    &kp PAGE_UP    &to_end_line                            &kp STAR   &kp N7                     &kp N8        &kp N9        &kp PLUS
+  &kp HOME          &kp LEFT  &kp DOWN  &kp RIGHT      &kp END                                 &kp SLASH  &hmr RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &hmr RCTRL MINUS
+  &select_all_line  &none     &none     &kp PAGE_DOWN  &none                                   &kp N0     &kp N1                     &kp N2        &kp N3        &kp DOT
+                                        &none          &kp ENTER     &kp TAB    &kp BACKSPACE  &kp SPACE  &none
             >;
         };
 
         nav_ru {
             bindings = <
-  &to_home_line  &none         &kp UP    &kp PAGE_UP    &to_end_line                            &en ASTERISK  &kp N7                     &kp N8        &kp N9        &kp PLUS
-  &kp HOME       &kp LEFT      &kp DOWN  &kp RIGHT      &kp END                                 &kp RU_SLASH  &hmr RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &hmr RCTRL MINUS
-  &to_all_line   &double_line  &none     &kp PAGE_DOWN  &none                                   &kp N0        &kp N1                     &kp N2        &kp N3        &kp RU_DOT
-                                         &none          &kp ENTER     &kp TAB    &kp BACKSPACE  &kp SPACE     &none
+  &to_home_line     &none         &kp UP    &kp PAGE_UP    &to_end_line                            &en ASTERISK  &kp N7                     &kp N8        &kp N9        &kp PLUS
+  &kp HOME          &kp LEFT      &kp DOWN  &kp RIGHT      &kp END                                 &kp RU_SLASH  &hmr RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &hmr RCTRL MINUS
+  &select_all_line  &double_line  &none     &kp PAGE_DOWN  &none                                   &kp N0        &kp N1                     &kp N2        &kp N3        &kp RU_DOT
+                                            &none          &kp ENTER     &kp TAB    &kp BACKSPACE  &kp SPACE     &none
             >;
         };
 
@@ -539,10 +556,10 @@
 
         nav_mac_ru {
             bindings = <
-  &to_home_line  &none     &kp UP    &kp PAGE_UP    &to_end_line                            &en STAR   &kp N7                     &kp N8        &kp N9        &kp PLUS
-  &kp HOME       &kp LEFT  &kp DOWN  &kp RIGHT      &kp END                                 &kp SLASH  &hmr RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &hmr RCTRL MINUS
-  &to_all_line   &none     &none     &kp PAGE_DOWN  &none                                   &kp N0     &kp N1                     &kp N2        &kp N3        &kp LS(NUMBER_7)
-                                     &none          &kp ENTER     &kp TAB    &kp BACKSPACE  &kp SPACE  &none
+  &to_home_line     &none     &kp UP    &kp PAGE_UP    &to_end_line                            &en STAR   &kp N7                     &kp N8        &kp N9        &kp PLUS
+  &kp HOME          &kp LEFT  &kp DOWN  &kp RIGHT      &kp END                                 &kp SLASH  &hmr RIGHT_SHIFT NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &hmr RCTRL MINUS
+  &select_all_line  &none     &none     &kp PAGE_DOWN  &none                                   &kp N0     &kp N1                     &kp N2        &kp N3        &kp LS(NUMBER_7)
+                                        &none          &kp ENTER     &kp TAB    &kp BACKSPACE  &kp SPACE  &none
             >;
         };
 
